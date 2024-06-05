@@ -1,9 +1,14 @@
-function ProductRow(){
-
+import style from './ProductRow.module.css'
+function ProductRow({name, price,stocked}){
     return(
-        <>
-        <p>Product Row</p>
-        </>
+        <li className={style.listItem}>
+            <p className={stocked ? '' : style.unstocked}>
+                {name}
+            </p>
+            <p>
+                {price}
+            </p>
+        </li>
     );
 }
 export default ProductRow;

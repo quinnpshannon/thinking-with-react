@@ -1,9 +1,8 @@
-function ProductCategoryRow(){
+import style from './ProductCategoryRow.module.css'
+function ProductCategoryRow({category}){
 
     return(
-        <>
-        <p>Product Category Row</p>
-        </>
+        <li className={style.category}>{category}</li>
     );
 }
 export default ProductCategoryRow;
